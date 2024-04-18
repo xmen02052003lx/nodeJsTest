@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MovieUI</title>
+    <!-- Include Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <style>
+      /* Customize CSS styles here */
+      .movie-poster {
+        width: 200px;
+        height: 300px;
+        object-fit: cover;
+        cursor: pointer;
+      }
+      .title {
+        background-color: orange;
+        border-radius: 50%;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="text-center">MOVIE <span class="title">UI</span></h1>
+    <div class="container mt-5">
+      <div class="row" id="movieGrid">
+        <!-- Movie posters will be dynamically added here -->
+      </div>
+    </div>
+    <!-- Pagination controls -->
+    <div class="container mt-3">
+      <div class="row justify-content-center">
+        <button id="prevBtn" class="btn btn-secondary mr-2">&lt; Prev</button>
+        <button id="nextBtn" class="btn btn-secondary ml-2">Next &gt;</button>
+      </div>
+    </div>
+
+    <!-- Movie details modal -->
+    <div
+      class="modal fade"
+      id="movieModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="movieModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="movieModalLabel">Movie Details</h5>
+            <button
+              type="button"
+              class="close bg-danger"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="modalBody">
+            <!-- Movie details will be dynamically added here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Include Bootstrap and custom JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
